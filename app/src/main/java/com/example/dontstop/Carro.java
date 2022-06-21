@@ -3,6 +3,7 @@ package com.example.dontstop;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 
 public class Carro {
     int x, y, width, height,score;
@@ -11,7 +12,7 @@ public class Carro {
     Bitmap carro1;
     Carro (GameView gameView, int screenY, Resources res) {
         this.gameView = gameView;
-        carro1 = BitmapFactory.decodeResource(res, R.drawable.carro1);
+        carro1 = BitmapFactory.decodeResource(res, R.drawable.carro4);
 
         width = carro1.getWidth();
         height = carro1.getHeight();
@@ -36,6 +37,9 @@ public class Carro {
         score++;*/
 
         return carro1;
+    }
+    Rect getCollisionShape () {
+        return new Rect(x, y, x + width, y + height);
     }
 
 }

@@ -20,7 +20,7 @@ public class GameActivity extends AppCompatActivity {
         Point point = new Point();
         getWindowManager().getDefaultDisplay().getSize(point);
 
-        gameView = new GameView(this, point.x, point.y);
+        gameView = new GameView(this,this, point.x, point.y);
 
         setContentView(gameView);
     }
@@ -29,6 +29,8 @@ public class GameActivity extends AppCompatActivity {
         super.onPause();
         gameView.pause();
     }
+
+
 
     @Override
     protected void onResume() {
