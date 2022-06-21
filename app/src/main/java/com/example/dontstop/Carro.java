@@ -17,23 +17,23 @@ public class Carro {
         height = carro1.getHeight();
 
         width /= 4;
-        height /= 4;
+        height /= 1;
 
         width = (int) (width * gameView.screenRatioX);
         height = (int) (height * gameView.screenRatioY);
 
         carro1 = Bitmap.createScaledBitmap(carro1, width, height, false);
 
-        y = screenY ;
+        y = screenY - height/2 ;
         x = (int) (64 * gameView.screenRatioX);
     }
 
     Bitmap getCarro(){
-        if (score == 0){
+        /*if (score == 0){
             score++;
             return carro1;
         }
-        score++;
+        score++;*/
 
         return carro1;
     }
