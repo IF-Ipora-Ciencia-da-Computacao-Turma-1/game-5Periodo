@@ -10,7 +10,7 @@ public class Backgroud {
     Bitmap backgroud;
 
     Backgroud(int screenX, int screemY, Resources res){
-        backgroud = BitmapFactory.decodeResource(res,R.drawable.pista1);
+        backgroud = BitmapFactory.decodeResource(res,R.drawable.pista6);
         backgroud = Bitmap.createScaledBitmap(backgroud,screenX,screemY,false);
 
     }

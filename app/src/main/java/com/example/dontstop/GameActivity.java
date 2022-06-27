@@ -3,12 +3,14 @@ package com.example.dontstop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Point;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.WindowManager;
 
 public class GameActivity extends AppCompatActivity {
 
     private GameView gameView;
+    private MediaPlayer musica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,29 @@ public class GameActivity extends AppCompatActivity {
 
         setContentView(gameView);
     }
+    public void tocarMusica(boolean tocar){
+        //handler = new Handler();
+        musica = MediaPlayer.create(this,R.raw.musicagtacorte);
+        if (tocar){
+            musica.start();
+            musica.setLooping(true);
+
+            /*handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    //musica.stop();
+                    //musica.start();
+                }
+            },musica.getDuration());*/
+        }else{
+            //musica.pause();
+            //musica.stop();
+            musica.release();
+            musica = null;
+        }
+
+
+    }
     @Override
     protected void onPause() {
         super.onPause();
@@ -37,4 +62,5 @@ public class GameActivity extends AppCompatActivity {
         super.onResume();
         gameView.resume();
     }
+
 }

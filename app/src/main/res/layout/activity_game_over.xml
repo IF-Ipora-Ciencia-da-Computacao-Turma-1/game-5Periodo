@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pista1" />
+
+
+    <TextView
+        android:id="@+id/txtGameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Game Over"
+        android:textColor="#fff"
+        android:textSize="64sp" />
+
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/txtGameOver"
+        android:layout_alignStart="@+id/txtGameOver"
+        android:layout_alignEnd="@+id/txtGameOver"
+
+        android:text="score"
+        android:textColor="#fff"
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/txtScoreAtual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/txtScore"
+        android:layout_alignStart="@+id/txtScore"
+        android:layout_alignEnd="@+id/txtScore"
+
+        android:text="score"
+        android:textColor="#fff"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:id="@+id/volumeCtrl"
+        android:src="@drawable/ic_baseline_volume_up_24"/>
+
+
+
+</RelativeLayout>

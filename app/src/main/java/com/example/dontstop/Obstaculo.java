@@ -21,16 +21,17 @@ public class Obstaculo {
 
     Obstaculo (Resources res){
         carros = new ArrayList<>();
+        random = new Random();
 
         this.res = res;
 
         carro = BitmapFactory.decodeResource(res, R.drawable.carro1);
-        carro1 = BitmapFactory.decodeResource(res, R.drawable.carro1);
+        /*carro1 = BitmapFactory.decodeResource(res, R.drawable.carro1);
         carro2 = BitmapFactory.decodeResource(res, R.drawable.carro2);
         carro3 = BitmapFactory.decodeResource(res, R.drawable.carro3);
         carro4 = BitmapFactory.decodeResource(res, R.drawable.carro4);
         carro5 = BitmapFactory.decodeResource(res, R.drawable.carro5);
-
+*/
         width = carro.getWidth();
         height = carro.getHeight();
 
@@ -41,7 +42,7 @@ public class Obstaculo {
         height = (int) (height * GameView.screenRatioY);
 
 
-        carro = Bitmap.createScaledBitmap(carro, width, height, false);
+        /*carro = Bitmap.createScaledBitmap(carro, width, height, false);
         carro1 = Bitmap.createScaledBitmap(carro1, width, height, false);
         carro2 = Bitmap.createScaledBitmap(carro2, width, height, false);
         carro3 = Bitmap.createScaledBitmap(carro3, width, height, false);
@@ -51,7 +52,9 @@ public class Obstaculo {
         carros.add(carro2);
         carros.add(carro3);
         carros.add(carro4);
-        carros.add(carro5);
+        carros.add(carro5);*/
+        carro= Bitmap.createScaledBitmap(carro, width, height, false);
+        atualizarCarro();
         y = screenY - height/2 ;
         x = (int) (64 * gameView.screenRatioX);
     }
@@ -59,7 +62,7 @@ public class Obstaculo {
 
     }*/
    public void atualizarCarro(){
-        int aux = random.nextInt(carros.size()-1 );
+        int aux = random.nextInt(5);
         if(aux <= 0){
             carro = BitmapFactory.decodeResource(res, R.drawable.carro1);
             carro= Bitmap.createScaledBitmap(carro, width, height, false);
